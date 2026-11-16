@@ -5,12 +5,7 @@ from django.db import models
 
 
 
-class Programador(models.Model):
-    nombre = models.CharField(max_length=50)
-    apellido1 = models.CharField(max_length=50)
 
-    def __str__(self):
-        return f"{self.id} {self.nombre}"
 
 class Proyecto(models.Model):
     nombre  = models.CharField(max_length=30)
@@ -30,6 +25,13 @@ class Sprint(models.Model):
 
 class Etiqueta(models.Model):
     nombre  = models.CharField(max_length=20)
+
+    def __str__(self):
+        return f"{self.id} {self.nombre}"
+
+class Programador(models.Model):
+    nombre = models.CharField(max_length=50)
+    apellido1 = models.CharField(max_length=50)
 
     def __str__(self):
         return f"{self.id} {self.nombre}"
