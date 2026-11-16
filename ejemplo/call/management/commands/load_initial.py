@@ -6,5 +6,5 @@ from call.models import Persona
 class Command(BaseCommand):
     help = 'Comando de carga'
     def handle(self, *args, **options):
-        persona = Persona(nombre="Fran",primer_apellido="Alia",segundo_apellido="Hernandez")
+        persona = Persona(nombre="Fran",primer_apellido="Grande",segundo_apellido="Franco")
         persona.save()
